@@ -1,0 +1,227 @@
+#headers{
+  @include wg(100%,115px);
+  @media(min-width: 1200px){
+    .headers_top{
+      @include wg(88%,50px);
+    }
+  }
+  .headers_top{
+    padding-top: 12px;
+    @include ma;
+    .logo{
+      @include fd(0);
+      @include mt(2px);
+      a{
+        @include ds(1);
+        @include wg(130px,48px);
+        background: url('../../static/img/icon201706.png') no-repeat -658px 0px;
+      }
+    }
+    .right{
+      @include fd(1);
+      @include wg(70%,42px);
+      background: #fff;
+      margin: auto;
+      .middle{
+        @include wg(27%,21px);
+        @include fd(0);
+        a{
+          @include ds(2);
+          @include lh(20px);
+          //padding:0 5px;
+          margin: 0 5px;
+          @include color(#999);
+          @include fs(12px);
+          @include fd(0);
+          i{
+            @include ds(2);
+            @include wg(11px,8px);
+            background: url('../../static/img/icon2015-0.png') no-repeat -357px -773px;
+            vertical-align: middle;
+            margin: 1px 0 0 5px;
+          }
+          &:hover{
+            @include color(#f55);
+          }
+        }
+        b{
+          @include ds(2);
+          @include wg(1px,12px);
+          border-left:1px solid #c5c5c5;
+          @include fd(0);
+          @include mt(4px);
+        }
+      }
+      .service{
+        @include fd(1);
+        a{
+          @include ds(2);
+          @include wg(150px,42px);
+          @include dingwei(0,auto,auto);
+          background: #fff;
+          i{
+            @include ds(2);
+            @include wg(42px,42px);
+            background: url('../../static/img/icon201706.png') no-repeat;
+            @include fd(0);
+            @include mt(1px);
+          }
+          .style{
+            @include fd(0);
+            em{
+              font: 14px/18px Microsoft yahei;
+              padding: 0 0 0 10px;
+              width: 90px;
+            }
+          }
+          .program{
+            @include dingwei(1,59px,0);
+            padding: 10px;
+            @include wg(217px,92px);
+            box-shadow:1px 1px 3px rgba(0, 0, 0, 0.3);
+            background: yellow;
+            @include ds(0);
+            position: absolute;
+            background: url('../../static/img/icon201706.png') no-repeat #fff;
+          }
+          &:hover .program{
+            @include ds(1);
+          }
+        }
+        a:nth-child(1){
+          i{
+            background-position: -127px -763px;
+          }
+          em{
+            @include color(#09bb07);
+          }
+          .program{
+            background-position: -397px -173px;
+          }
+        }
+        a:nth-child(2){
+          i{
+            background: url('../../static/img/com_icon01.gif') no-repeat;
+          }
+          em{
+            @include color(#ff6a6a);
+          }
+          .program{
+            @include wg(208px,92px);
+            @include dingwei(1,57px,0);
+            background-position: -460px -48px;
+          }
+        }
+        a:nth-child(3){
+          @include wg(180px,42px);
+          i{
+            background-position: -42px -762px;
+          }
+          em{
+            @include color(#999);
+          }
+          b{
+            em{
+              @include color(#2064c8);
+              font-weight: 500;
+              @include fs(16px);
+            }
+          }
+          .program{
+            @include wg(208px,92px);
+            @include dingwei(1,57px,0);
+            background-position: -460px -48px;
+          }
+        }
+      }
+    }
+  }
+  @media(min-width:1020px) and (max-width:1200px){
+    .headers_top{
+      @include wg(90%,50px);
+      .right{
+        @include wg(84%,42px);
+      }
+    }
+  }
+  @media(min-width:760px) and (max-width:1020px) {
+    .headers_top{
+      @include wg(100%,50px);
+      .right{
+        @include wg(83%,42px);
+        .middle{
+          @include wg(30%,21px);
+        }
+        .service{
+          a{
+            @include wg(124px,42px);
+          }
+          .style{
+            em{
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav_box{
+    @include wg(100%,40px);
+    @include mt(13px);
+    @include bg(#2064c8);
+    //min-width: 1000px;
+    display: flex;
+    .nav{
+      @include wg(88%,40px);
+      @include lh(40px);
+      @include ma;
+      display: flex;
+      justify-content: space-between;
+      div{
+        a{
+          @include ds(1);
+          height: 40px;
+          padding: 0 12px;
+          @include fs(14px);
+          @include color(#fff);
+          @include fd(0);
+          &:hover{
+            @include bg(#0053ac);
+          }
+        }
+      }
+      .nav_left{
+        @include fd(0);
+        height: 40px;
+        div{
+          @include fd(0);
+        }
+        div:nth-child(1) a{
+          @include bg(#003679);
+        }
+        div:nth-child(2) a{
+          @include bg(#2064c8);
+        }
+      }
+      .nav_right{
+        @include bg(#003679);
+        @include fd(0);
+        @include wg(120px,40px);
+        @include ztjz;
+        display: flex;
+        justify-content: center;
+        .content{
+          @include fs(14px);
+          @include color(#fff);
+          a{
+            padding: 0;
+          }
+          &:last-child{
+            @include ml(8px);
+          }
+        }
+      }
+    }
+
+  }
+}

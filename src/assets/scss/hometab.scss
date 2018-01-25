@@ -1,0 +1,81 @@
+.hometab{
+  @include wg(1200px,250px);
+  background:#fff;
+  .tab_top{
+    @include wg(100%,28px);
+    padding: 10px 0;
+    h3{
+      a{
+        @include color(#666);
+        @include fs(18px);
+        font-weight: normal;
+        padding-right: 20px;
+      }
+      span{
+        @include fs(14px);
+        @include color(#555);
+        padding: 3px 10px;
+        margin: 4px 10px 0;
+        border-radius: 12px;
+        @include xs;
+        font-weight: normal;
+        border: 1px solid #fff;
+        &:hover{
+          @include color(#F66);
+          border: 1px solid #F66;
+        }
+      }
+      .active{
+        background: #f66;
+        color:#fff;
+        border:1px solid #F66;
+      }
+    }
+  }
+  .tab_end{
+    @include wg(1220px,202px);
+    @include dingwei(0,auto,auto);
+    .nei{
+      @include wg(100%,100%);
+      list-style: none;
+      @include dingwei(1,0,0);
+      li{
+        width: 293px;
+        height: 202px;
+        @include fd(0);
+        @include mr(10px);
+        a{
+          .pic{
+            @include wg(293px,160px);
+            overflow: hidden;
+            @include dingwei(0,auto,auto);
+            img{
+              @include dingwei(1,-15px,0);
+              transition: all 0.3s;
+            }
+            span{
+              @include fs(24px);
+              @include dingwei(1,125px,10px);
+              color: #fff;
+            }
+          }
+          .txt{
+            height: 30px;
+            padding: 5px 10px;
+            @include lh(30px);
+            @include bg(#f7f7f7);
+            border-bottom:1px solid #ccc;
+            @include color(#555);
+            @include fs(14px);
+          }
+        }
+      }
+      li:hover .txt{
+        border-bottom: 2px solid #f55;
+      }
+      li:hover a .pic img{
+        top:-25px;
+      }
+    }
+  }
+}
